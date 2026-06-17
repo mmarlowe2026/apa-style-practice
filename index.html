@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>APA Style Interactive Practice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: auto;
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    .question {
+      background: #f0f4f8;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 10px;
+    }
+
+    button {
+      display: block;
+      margin: 8px 0;
+      padding: 10px 14px;
+      border: none;
+      border-radius: 8px;
+      background: #e2e8f0;
+      cursor: pointer;
+      font-size: 16px;
+      text-align: left;
+      width: 100%;
+    }
+
+    button:hover {
+      background: #d0d7de;
+    }
+
+    .feedback {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .correct {
+      color: green;
+    }
+
+    .incorrect {
+      color: #b00020;
+    }
+
+    .tip {
+      background: #fff8dc;
+      padding: 12px;
+      border-left: 5px solid #f0c36d;
+      margin: 15px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>APA Style Interactive Practice</h1>
+
+    <p>
+      In psychology and other social science courses, APA 7 style is used for writing assignments and discussions.
+      This short practice activity will help you review when to cite, how to format basic in-text citations,
+      and what belongs on an APA reference page.
+    </p>
+
+    <div class="tip">
+      Tip: Keep your APA handout open while completing this activity. You can return to it before submitting writing assignments.
+    </div>
+
+    <h2>1. Why APA Style Matters</h2>
+
+    <div class="question">
+      <p><strong>Question 1:</strong> Why do psychology courses require APA style?</p>
+
+      <button onclick="checkAnswer(this, false)">To make papers longer</button>
+      <button onclick="checkAnswer(this, true)">To give credit to sources and avoid plagiarism</button>
+      <button onclick="checkAnswer(this, false)">To replace discussion posts</button>
+      <button onclick="checkAnswer(this, false)">To avoid using references</button>
+
+      <p class="feedback"></p>
+    </div>
+
+    <h2>2. In-Text Citations</h2>
+
+    <div class="question">
+      <p><strong>Question 2:</strong> True or False: If you paraphrase information from a textbook in your own words, you do not need an in-text citation.</p>
+
+      <button onclick="checkAnswer(this, false)">True</button>
+      <button onclick="checkAnswer(this, true)">False</button>
+
+      <p class="feedback"></p>
+    </div>
+
+    <div class="question">
+      <p><strong>Question 3:</strong> Which citation is correct for a direct quote?</p>
+
+      <button onclick="checkAnswer(this, false)">(Smith, 2017)</button>
+      <button onclick="checkAnswer(this, true)">(Smith, 2017, p. 33)</button>
+      <button onclick="checkAnswer(this, false)">Smith 2017</button>
+      <button onclick="checkAnswer(this, false)">www.website.com</button>
+
+      <p class="feedback"></p>
+    </div>
+
+    <h2>3. APA Title Page</h2>
+
+    <div class="question">
+      <p><strong>Question 4:</strong> Which item should NOT be included on a basic APA student title page for this class?</p>
+
+      <button onclick="checkAnswer(this, false)">Paper title</button>
+      <button onclick="checkAnswer(this, false)">Student name</button>
+      <button onclick="checkAnswer(this, true)">Decorative pictures</button>
+      <button onclick="checkAnswer(this, false)">Course name</button>
+
+      <p class="feedback"></p>
+    </div>
+
+    <h2>4. Reference Page</h2>
+
+    <div class="question">
+      <p><strong>Question 5:</strong> What should the APA reference page be titled?</p>
+
+      <button onclick="checkAnswer(this, false)">Works Cited</button>
+      <button onclick="checkAnswer(this, false)">Bibliography</button>
+      <button onclick="checkAnswer(this, true)">References</button>
+      <button onclick="checkAnswer(this, false)">Sources</button>
+
+      <p class="feedback"></p>
+    </div>
+
+    <h2>Final Reminder</h2>
+
+    <p>
+      Before submitting writing assignments, review your APA handout and sample APA assignment.
+      Pay special attention to the title page, in-text citations, paraphrasing, direct quotes, and reference page.
+    </p>
+  </div>
+
+  <script>
+    function checkAnswer(button, isCorrect) {
+      const questionBox = button.parentElement;
+      const feedback = questionBox.querySelector(".feedback");
+
+      if (isCorrect) {
+        feedback.textContent = "Correct!";
+        feedback.className = "feedback correct";
+      } else {
+        feedback.textContent = "Not quite. Review the APA handout and try again.";
+        feedback.className = "feedback incorrect";
+      }
+    }
+  </script>
+</body>
+</html>
